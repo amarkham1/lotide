@@ -43,4 +43,8 @@ assertArraysEqual(flatten([[1], 2, [3, 4], 5, []]), [1, 2, 3, 4, 5]);
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 assertArraysEqual(flatten([]), []);
 console.log("doesn't handle more than a 2D-array");
-assertArraysEqual(flatten([1, 2, [3, [4, 5]], 6, [7]]), [1, 2, 3, 4, 5, 6]);
+assertArraysEqual(flatten([1, 2, [3, [4, 5]], 6, [7]]), [1, 2, 3, [4, 5], 6, 7]);
+assertArraysEqual(flatten([1, 2, [3, [4, [5, 6]]], 6, [7]]), [1, 2, 3, [4, 5], 6, 7]);
+console.log(flatten([1, 2, [3, [4, [5, 6]]], 6, [7]]));
+console.log(flatten([1, 2, [[[[3]]], 4], 5, [6]]));
+//[1, 2, [[[Array]]], 4 ,5, 6]
