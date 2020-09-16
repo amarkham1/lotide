@@ -2,11 +2,11 @@ const failed = String.fromCodePoint(0x274C);
 const passed = String.fromCodePoint(0x2705);
 
 const assertArraysEqual = function(array1, array2) {
-  let arraysEqual = eqArrays(array1, array2);
-  if (arraysEqual) {
-    console.log(`${passed}${passed}${passed} Assertion Passed: ${array1} === ${array2}`);
+  const inspect = require('util').inspect;
+  if (eqArrays(array1, array2)) {
+    console.log(`${passed}${passed}${passed} Assertion Passed: ${inspect(array1)} === ${inspect(array2)}`);
   } else {
-    console.log(`${failed}${failed}${failed} Assertion Failed: ${array1} !== ${array2}`);
+    console.log(`${failed}${failed}${failed} Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
   }
 };
 
