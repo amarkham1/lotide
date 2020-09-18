@@ -37,7 +37,7 @@ const letterPositions = function(sentence) {
     i++;
   }
   return result;
-}
+};
 
 assertArraysEqual(letterPositions('lighthouse in the house')["l"], [0]);
 assertArraysEqual(letterPositions('lighthouse in the house')["i"], [1, 11]);

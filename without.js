@@ -24,20 +24,20 @@ const eqArrays = function(array1, array2) {
   return isEqual;
 };
 // Loop through the source values of each array
-   // Loop through items we want to remove and compare against source value
+// Loop through items we want to remove and compare against source value
 // if we get to end of the remove item loop and don't see a match, we can safely add the item
 
 const without = function(source, itemsToRemove) {
   let removedArray = [];
 
-  for(let i = 0; i < source.length; i++) {
+  for (let i = 0; i < source.length; i++) {
     let keepItemFlag = true;
     for (let j = 0; j < itemsToRemove.length; j++) {
       if (source[i] === itemsToRemove[j]) {
         keepItemFlag = false;
       }
     }
-    if(keepItemFlag) {
+    if (keepItemFlag) {
       removedArray.push(source[i]);
     }
   }

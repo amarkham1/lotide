@@ -4,7 +4,7 @@ const map = (array, callback) => {
     results.push(callback(element));
   }
   return results;
-}
+};
 
 const words = ["ground", "control", "to", "major", "tom"];
 

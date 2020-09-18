@@ -3,12 +3,12 @@
 const takeUntil = (array, callback) => {
   let results = [];
   let i = 0;
-  while(i < array.length && !callback(array[i])) {
+  while (i < array.length && !callback(array[i])) {
     results.push(array[i]);
     i++;
   }
   return results;
-}
+};
 
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

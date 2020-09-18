@@ -19,7 +19,7 @@ const countLetters = function(sentence) {
     }
   }
   return result;
-}
+};
 
 assertEqual(countLetters('LHL')["L"], 2);
 assertEqual(countLetters('LHL')["H"], 1);

@@ -11,11 +11,11 @@ const assertEqual = function(actual, expected) {
 
 const eqObjects = function(object1, object2) {
   return lengthCheck(object1, object2) && valueCheck(object1, object2) && valueCheck(object2, object1);
-}
+};
 
 const lengthCheck = function(object1, object2) {
-  return Object.keys(object1).length === Object.keys(object2).length
-}
+  return Object.keys(object1).length === Object.keys(object2).length;
+};
 
 const valueCheck = function(object1, object2) {
   for (const key of Object.keys(object1)) {
@@ -30,7 +30,7 @@ const valueCheck = function(object1, object2) {
     }
   }
   return true;
-}
+};
 
 const eqArrays = function(array1, array2) {
   let isEqual = true;

@@ -15,16 +15,16 @@ const findKeyByValue = function(objectToSearch, searchValue) {
       return key;
     }
   }
-}
+};
 
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
+const bestTVShowsByGenre = {
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue({drama: "Handmaid's Tale"}, "Handmaid's Tale"), "drama");
+assertEqual(findKeyByValue({drama: "Handmaid's Tale"}, "Handmai'ds Tale"), "drama");
 assertEqual(findKeyByValue({}, "anything"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, ""), undefined);
