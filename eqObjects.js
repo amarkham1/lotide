@@ -18,7 +18,7 @@ const lengthCheck = function(object1, object2) {
 };
 
 const valueCheck = function(object1, object2) {
-  for (const [key, value] of Object.entries(object1)) {
+  for (const key of Object.keys(object1)) {
     if (typeof object1[key] === "object" && typeof object2[key] === "object") {
       if (!valueCheck(object1[key], object2[key])) {
         return false;
