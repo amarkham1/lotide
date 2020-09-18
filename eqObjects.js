@@ -10,20 +10,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqObjects = function(object1, object2) {
-  return lengthCheck(object1, object2) && valueCheck(object1, object2) && valueCheck(object2, object1);
-};
-
-const lengthCheck = function(object1, object2) {
-  return Object.keys(object1).length === Object.keys(object2).length;
-};
-
-const valueCheck = function(object1, object2) {
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
+    return false;
+  }
   for (const key of Object.keys(object1)) {
     if (typeof object1[key] === "object" && typeof object2[key] === "object") {
-      if (!valueCheck(object1[key], object2[key])) {
+      if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
-    } else if (!object2[key] || (object1[key] !== object2[key])) {
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
   }
