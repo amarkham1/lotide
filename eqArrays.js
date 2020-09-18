@@ -13,15 +13,21 @@ const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
+  for (const key in array1) {
+    if (Array.isArray(array1[key])) {
+      if (!eqArrays(array1[key], array2[key]) {
+        return false;
+      }
+    } else {
+      return true;
     }
   }
   
   return true;
 };
 
+
+assertEqual(eqArrays([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]), true);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);

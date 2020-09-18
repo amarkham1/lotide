@@ -23,10 +23,8 @@ const valueCheck = function(object1, object2) {
       if (!valueCheck(object1[key], object2[key])) {
         return false;
       }
-    } else {
-      if (!object2[key] || (object1[key] !== object2[key])) {
-        return false;
-      }
+    } else if (!object2[key] || (object1[key] !== object2[key])) {
+      return false;
     }
   }
   return true;
