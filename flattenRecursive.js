@@ -32,9 +32,7 @@ const flatten = function(multiLevelArray) {
     if (!Array.isArray(multiLevelArray[i])) {
       singleLevelArray.push(multiLevelArray[i]);
     } else {
-      for (let j = 0; j < multiLevelArray[i].length; j++) {
-        singleLevelArray.push(multiLevelArray[i][j]);
-      }
+      flatten(multiLevelArray[i]);
     }
   }
   return singleLevelArray;

@@ -15,7 +15,7 @@ const eqArrays = (array1, array2) => {
     return false;
   }
   for (const key in array1) {
-    if (Array.isArray(array1[key])) {
+    if (Array.isArray(array1[key]) && Array.isArray(array2[key])) {
       if (!eqArrays(array1[key], array2[key])) {
         return false;
       }
