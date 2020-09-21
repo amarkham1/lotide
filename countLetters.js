@@ -25,3 +25,5 @@ assertEqual(countLetters('LHL')["L"], 2);
 assertEqual(countLetters('LHL')["H"], 1);
 assertEqual(countLetters('HELLO WORLD')[" "], 1);
 assertEqual(countLetters('LHLOL')["L"], 3);
+
+module.exports = countLetters;

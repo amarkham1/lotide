@@ -34,3 +34,5 @@ const assertEqual = function(actual, expected) {
     console.log(`${failed}${failed}${failed} Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+module.exports = findKey;

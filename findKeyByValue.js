@@ -1,3 +1,5 @@
+const { findKey } = require(".");
+
 const failed = String.fromCodePoint(0x274C);
 const passed = String.fromCodePoint(0x2705);
 
@@ -28,3 +30,5 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue({drama: "Handmaid's Tale"}, "Handmai'ds Tale"), "drama");
 assertEqual(findKeyByValue({}, "anything"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, ""), undefined);
+
+module.exports = findKeyByValue;

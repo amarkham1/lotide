@@ -25,7 +25,7 @@ const eqArrays = function(array1, array2) {
   return isEqual;
 };
 
-const flatten = function(multiLevelArray) {
+const flattenDeep = function(multiLevelArray) {
   const singleLevelArray = [];
 
   for (let i = 0; i < multiLevelArray.length; i++) {
@@ -44,3 +44,6 @@ assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 assertArraysEqual(flatten([]), []);
 console.log("doesn't handle more than a 2D-array");
 assertArraysEqual(flatten([1, 2, [3, [4, 5]], 6, [7]]), [1, 2, 3, [4, 5], 6]);
+
+
+module.exports = flattenDeep;
