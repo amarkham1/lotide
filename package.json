@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@amarkham/lotide",
   "version": "1.0.0",
-  "description": "lotide package",
+  "description": "a mini clone of the Lodash library",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/amarkham1/lotide.git"
   },
-  "author": "",
+  "author": "Andrew Markham",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amarkham1/lotide/issues"

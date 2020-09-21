@@ -24,13 +24,13 @@ let test2Obj = {
 let test2Callback = x => x === "Ora";
 
 describe("#findKeyTest", () => {
-  it ("should return key of an object when looking for a value with a match", () => {
+  it("should return key of an object when looking for a value with a match", () => {
     assert.strictEqual(findKey(test1Obj, test1Callback), "noma");
   });
-  it ("should return key of an object when looking for a key with a match", () => {
+  it("should return key of an object when looking for a key with a match", () => {
     assert.strictEqual(findKey(test2Obj, test2Callback), "Ora");
   });
-  it ("should return null when unable to find a match", () => {
+  it("should return null when unable to find a match", () => {
     assert.strictEqual(findKey(test2Obj, x => x === "no match"), undefined);
   });
 });
